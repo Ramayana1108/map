@@ -43,6 +43,9 @@ export function ElephantModal({ closeModalElephant }) {
       },
     });
   };
+  const openReactNative = () => {
+    window.ReactNativeWebView.postMessage("Elephants");
+  };
   return (
     <div class="elephantModal" id="modalId">
       <div class="firstModal-content">
@@ -63,8 +66,9 @@ export function ElephantModal({ closeModalElephant }) {
             alt="elephants"
           />
         </div>
+        <br /> <br />
         <div class="seeAnimalsBtnDiv">
-          <button class="seeAnimalsBtn" onClick={openAnimalList}>
+          <button class="seeAnimalsBtn" onClick={openReactNative}>
             View Animals
           </button>
         </div>
@@ -81,6 +85,9 @@ export function HippopotamusModal({ closeModalHippopotamus }) {
         name: "Hippopotamus",
       },
     });
+  };
+  const openReactNative = () => {
+    window.ReactNativeWebView.postMessage("Hippopotamus");
   };
   return (
     <div class="hippopotamusModal" id="modalId">
@@ -103,7 +110,7 @@ export function HippopotamusModal({ closeModalHippopotamus }) {
           />
         </div>
         <div class="seeAnimalsBtnDiv">
-          <button class="seeAnimalsBtn" onClick={openAnimalList}>
+          <button class="seeAnimalsBtn" onClick={openReactNative}>
             View Animals
           </button>
         </div>
@@ -120,6 +127,9 @@ export function AviaryModal({ closeModalAviary }) {
         name: "Aviary",
       },
     });
+  };
+  const openReactNative = () => {
+    window.ReactNativeWebView.postMessage("Aviary");
   };
   return (
     <div class="aviaryModal" id="modalId">
@@ -142,7 +152,7 @@ export function AviaryModal({ closeModalAviary }) {
           />
         </div>
         <div class="seeAnimalsBtnDiv">
-          <button class="seeAnimalsBtn" onClick={openAnimalList}>
+          <button class="seeAnimalsBtn" onClick={openReactNative}>
             View Animals
           </button>
         </div>
@@ -159,6 +169,9 @@ export function HyenaModal({ closeModalHyena }) {
         name: "Hyena",
       },
     });
+  };
+  const openReactNative = () => {
+    window.ReactNativeWebView.postMessage("Hyena");
   };
   return (
     <div class="hyenaModal" id="modalId">
@@ -181,7 +194,7 @@ export function HyenaModal({ closeModalHyena }) {
           />
         </div>
         <div class="seeAnimalsBtnDiv">
-          <button class="seeAnimalsBtn" onClick={openAnimalList}>
+          <button class="seeAnimalsBtn" onClick={openReactNative}>
             View Animals
           </button>
         </div>
@@ -198,6 +211,9 @@ export function SavannaModal({ closeModalSavanna }) {
         name: "Savanna",
       },
     });
+  };
+  const openReactNative = () => {
+    window.ReactNativeWebView.postMessage("Savanna");
   };
   return (
     <div class="savannaModal" id="modalId">
@@ -220,7 +236,7 @@ export function SavannaModal({ closeModalSavanna }) {
           />
         </div>
         <div class="seeAnimalsBtnDiv">
-          <button class="seeAnimalsBtn" onClick={openAnimalList}>
+          <button class="seeAnimalsBtn" onClick={openReactNative}>
             View Animals
           </button>
         </div>
@@ -237,6 +253,9 @@ export function ApexModal({ closeModalApex }) {
         name: "Apex Predators",
       },
     });
+  };
+  const openReactNative = () => {
+    window.ReactNativeWebView.postMessage("Apex Predators");
   };
   return (
     <div class="apexModal" id="modalId">
@@ -259,7 +278,7 @@ export function ApexModal({ closeModalApex }) {
           />
         </div>
         <div class="seeAnimalsBtnDiv">
-          <button class="seeAnimalsBtn" onClick={openAnimalList}>
+          <button class="seeAnimalsBtn" onClick={openReactNative}>
             View Animals
           </button>
         </div>
@@ -276,6 +295,9 @@ export function EndemicModal({ closeModalEndemic }) {
         name: "Philippine Endemic",
       },
     });
+  };
+  const openReactNative = () => {
+    window.ReactNativeWebView.postMessage("Philippine Endemic");
   };
   return (
     <div class="endemicModal" id="modalId">
@@ -298,7 +320,7 @@ export function EndemicModal({ closeModalEndemic }) {
           />
         </div>
         <div class="seeAnimalsBtnDiv">
-          <button class="seeAnimalsBtn" onClick={openAnimalList}>
+          <button class="seeAnimalsBtn" onClick={openReactNative}>
             View Animals
           </button>
         </div>
@@ -315,6 +337,9 @@ export function ReptileModal({ closeModalReptile }) {
         name: "Outdoor Reptile",
       },
     });
+  };
+  const openReactNative = () => {
+    window.ReactNativeWebView.postMessage("Outdoor Reptile");
   };
   return (
     <div class="reptileModal" id="modalId">
@@ -337,7 +362,7 @@ export function ReptileModal({ closeModalReptile }) {
           />
         </div>
         <div class="seeAnimalsBtnDiv">
-          <button class="seeAnimalsBtn" onClick={openAnimalList}>
+          <button class="seeAnimalsBtn" onClick={openReactNative}>
             View Animals
           </button>
         </div>
@@ -354,6 +379,9 @@ export function MuseumModal({ closeModalMuseum }) {
         name: "Outdoor Reptile",
       },
     });
+  };
+  const openReactNative = () => {
+    window.ReactNativeWebView.postMessage("Outdoor Reptile");
   };
   return (
     <div class="museumModal" id="modalId">
@@ -376,7 +404,7 @@ export function MuseumModal({ closeModalMuseum }) {
           />
         </div>
         <div class="seeAnimalsBtnDiv">
-          <button class="seeAnimalsBtn" onClick={openAnimalList}>
+          <button class="seeAnimalsBtn" onClick={openReactNative}>
             View Animals
           </button>
         </div>
@@ -393,6 +421,9 @@ export function InReptileModal({ closeModalInReptile }) {
         name: "Indoor Reptile",
       },
     });
+  };
+  const openReactNative = () => {
+    window.ReactNativeWebView.postMessage("Indoor Reptile");
   };
   return (
     <div class="inreptileModal" id="modalId">
@@ -415,7 +446,7 @@ export function InReptileModal({ closeModalInReptile }) {
           />
         </div>
         <div class="seeAnimalsBtnDiv">
-          <button class="seeAnimalsBtn" onClick={openAnimalList}>
+          <button class="seeAnimalsBtn" onClick={openReactNative}>
             View Animals
           </button>
         </div>
@@ -432,6 +463,9 @@ export function LagoonModal({ closeModalLagoon }) {
         name: "Lagoon",
       },
     });
+  };
+  const openReactNative = () => {
+    window.ReactNativeWebView.postMessage("Lagoon");
   };
   return (
     <div class="lagoonModal" id="modalId">
@@ -454,7 +488,7 @@ export function LagoonModal({ closeModalLagoon }) {
           />
         </div>
         <div class="seeAnimalsBtnDiv">
-          <button class="seeAnimalsBtn" onClick={openAnimalList}>
+          <button class="seeAnimalsBtn" onClick={openReactNative}>
             View Animals
           </button>
         </div>
@@ -471,6 +505,9 @@ export function IslandModal({ closeModalIsland }) {
         name: "Center Island",
       },
     });
+  };
+  const openReactNative = () => {
+    window.ReactNativeWebView.postMessage("Center Island");
   };
   return (
     <div class="islandModal" id="modalId">
@@ -493,7 +530,7 @@ export function IslandModal({ closeModalIsland }) {
           />
         </div>
         <div class="seeAnimalsBtnDiv">
-          <button class="seeAnimalsBtn" onClick={openAnimalList}>
+          <button class="seeAnimalsBtn" onClick={openReactNative}>
             View Animals
           </button>
         </div>
@@ -510,6 +547,9 @@ export function PrimatesModal({ closeModalPrimates }) {
         name: "Primates",
       },
     });
+  };
+  const openReactNative = () => {
+    window.ReactNativeWebView.postMessage("Primates");
   };
   return (
     <div class="primatesModal" id="modalId">
@@ -532,7 +572,7 @@ export function PrimatesModal({ closeModalPrimates }) {
           />
         </div>
         <div class="seeAnimalsBtnDiv">
-          <button class="seeAnimalsBtn" onClick={openAnimalList}>
+          <button class="seeAnimalsBtn" onClick={openReactNative}>
             View Animals
           </button>
         </div>
@@ -549,6 +589,9 @@ export function ButterflyModal({ closeModalButterfly }) {
         name: "Butterfly Garden",
       },
     });
+  };
+  const openReactNative = () => {
+    window.ReactNativeWebView.postMessage("Butterfly Garden");
   };
   return (
     <div class="butterflyModal" id="modalId">
@@ -571,7 +614,7 @@ export function ButterflyModal({ closeModalButterfly }) {
           />
         </div>
         <div class="seeAnimalsBtnDiv">
-          <button class="seeAnimalsBtn" onClick={openAnimalList}>
+          <button class="seeAnimalsBtn" onClick={openReactNative}>
             View Animals
           </button>
         </div>
@@ -588,6 +631,9 @@ export function BotanicalModal({ closeModalBotanical }) {
         name: "Botanical",
       },
     });
+  };
+  const openReactNative = () => {
+    window.ReactNativeWebView.postMessage("Botanical");
   };
   return (
     <div class="botanicalModal" id="modalId">
@@ -610,7 +656,7 @@ export function BotanicalModal({ closeModalBotanical }) {
           />
         </div>
         <div class="seeAnimalsBtnDiv">
-          <button class="seeAnimalsBtn" onClick={openAnimalList}>
+          <button class="seeAnimalsBtn" onClick={openReactNative}>
             View Animals
           </button>
         </div>
