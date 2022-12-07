@@ -1,827 +1,1276 @@
 html {
-    zoom: 100%;
-    background-color: #668d3c;
-    
+  zoom: 100%;
+  background-color: #668d3c;
 }
-body{
-    font-family: AbortSignal, Helvetica, sans-serif;
-    font-size:10px;
-    line-height:1;
-    /* background: rgb(255, 255, 255); */
-    
-    margin: 0px;
-    
+body {
+  font-family: AbortSignal, Helvetica, sans-serif;
+  font-size: 10px;
+  line-height: 1;
+  /* background: rgb(255, 255, 255); */
+  max-height: fit-content;
+  margin: 0px;
 }
 .imagebackground {
-    background-attachment: fixed;
-    max-width: 854px;
-    height: auto;
-    position: absolute;
+  background-attachment: fixed;
+  width: 1000px;
+  height: auto;
+  position: absolute;
 }
 
-.closeBtn{
-    color: #ccc;
-    float: right;
-    font-size:30px;
-    
+.legendBox {
+  position: absolute;
+  background-color: #ffffff96;
+  align-self: center;
+  z-index: -1;
+  width: 950px;
+  height: 825px;
+  border-radius: 5%;
+  top: 1100px;
+  left: 25px;
 }
 
-.closeBtn:hover, .closeBtn:focus{
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
+.closeBtn {
+  color: #ccc;
+  float: right;
+  font-size: 30px;
 }
 
-.modal{
-    display: 'block';
-    position: fixed;
-    z-index:1;
-    left: 550px;
-    top: 540px;
-    height: 100%;
-    width: 200px;
-    overflow: auto;
-    justify-content: center;
+.closeBtn:hover,
+.closeBtn:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.elephantModal{
-    display: 'block';
-    position: fixed;
-    z-index:1;
-    left: 510px;
-    top: 590px;
-    height: 100%;
-    width: 200px;
-    overflow: auto;
-    border-radius: 5px;
-    justify-content: center;
+.modal {
+  display: "block";
+  position: fixed;
+  z-index: 1;
+  left: 550px;
+  top: 540px;
+  height: 100%;
+  width: 200px;
+  overflow: auto;
+  justify-content: center;
 }
 
-.modaltitle{
-    text-align: center;
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: -5px;
+.elephantModal {
+  display: "block";
+  position: absolute;
+  z-index: 1;
+  left: 554px;
+  top: 760px;
+  height: 100%;
+  width: 200px;
+  overflow: auto;
+  border-radius: 5px;
+  justify-content: center;
 }
 
-.modaldescription{
-    text-align: justify;
+.modaltitle {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: -5px;
 }
 
-.enclosureImageContainer{
-    /* height: 150px;
+.modaldescription {
+  text-align: justify;
+}
+
+.enclosureImageContainer {
+  /* height: 150px;
     width: 150px; */
-    align-items: center;
-    flex-wrap: wrap;
-    flex: content;
-
+  align-items: center;
+  flex-wrap: wrap;
+  flex: content;
 }
 
-.enclosureImage{
-    height: 100%;
-    width: 100%;
-    align-self: center;
-    border-radius: 5px;
-    /* margin-left: 5px;
+.enclosureImage {
+  height: 100%;
+  width: 100%;
+  align-self: center;
+  border-radius: 5px;
+  /* margin-left: 5px;
     margin-right: 5px; */
-    /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
-    
+  /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
 }
 
-.seeAnimalsBtnDiv{
-    margin-top: 10px;
+.seeAnimalsBtnDiv {
+  margin-top: 10px;
 }
 
-.seeAnimalsBtn{
-    align-items: center;
-    background-color: #FFFFFF;
-    color: #668d3c;
-    border: 1px solid;
-    border-color: #668d3c;
-    border-radius: 5px;
-    padding: 5px;
-    width: 160px;
-    /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
-    justify-content: end;
+.seeAnimalsBtn {
+  align-items: center;
+  background-color: #ffffff;
+  color: #668d3c;
+  border: 1px solid;
+  border-color: #668d3c;
+  border-radius: 5px;
+  padding: 5px;
+  width: 160px;
+  /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
+  justify-content: end;
 }
 
-.seeAnimalsBtn:hover{
-    background-color: #668d3c;
-    color: #FFFFFF;
+.seeAnimalsBtn:hover {
+  background-color: #668d3c;
+  color: #ffffff;
 }
 
-.firstModal-content{
-    background-color: #fff;
-    margin: 20% auto;
-    padding: 20px;
-    width: 80%;
-    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2);
-    border-radius: 5%;
-    animation: anime2 1s infinite ease-in-out alternate;
+.firstModal-content {
+  background-color: #fff;
+  margin: 20% auto;
+  padding: 20px;
+  width: 80%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5%;
+  animation: anime2 1s infinite ease-in-out alternate;
 }
 
-@keyframes anime{
-    100%{
-        transform:translateY(8px);
-        -webkit-transform: translateY(4);
-        -moz-transform: translateY(4);
-        -ms-transform: translateY(4);
-        -o-transform: translateY(4);
-        /* transform: scale(4); */
-        
-    }
+@keyframes anime {
+  100% {
+    transform: translateY(8px);
+    -webkit-transform: translateY(4);
+    -moz-transform: translateY(4);
+    -ms-transform: translateY(4);
+    -o-transform: translateY(4);
+    /* transform: scale(4); */
+  }
 }
 
-@keyframes anime2{
-    100%{
-        transform:translateY(2px);
-        -webkit-transform: translateY(2px);
-        -moz-transform: translateY(2px);
-        -ms-transform: translateY(2px);
-        -o-transform: translateY(2px);
-        /* transform: scale(1.01); */
-        
-    }
+@keyframes anime2 {
+  100% {
+    transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    -moz-transform: translateY(2px);
+    -ms-transform: translateY(2px);
+    -o-transform: translateY(2px);
+    /* transform: scale(1.01); */
+  }
 }
 
-@keyframes anime3{
-    100%{
-        
-        transform: scale(0.8);
-        
-    }
+@keyframes anime3 {
+  100% {
+    transform: scale(0.8);
+  }
 }
 
-.elephantButton{
-    background-color: transparent;
-    height: 20px;
-    width: 20px;
-    border-color: transparent;
-    
-    /*  */
-    color:#ff0000;
-    
-  
-    
-    
-    
-    animation: anime 1s infinite ease-in-out alternate;
+.elephantButton {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border-color: transparent;
+
+  /*  */
+  color: #ff0000;
+
+  animation: anime 1s infinite ease-in-out alternate;
 }
 
-.buttonContainerElephant{
-    position: absolute;
-    left: 525px;
-    top: 545px;
-    
+.buttonContainerElephant {
+  position: absolute;
+  left: 624px;
+  top: 750px;
+  z-index: 1;
 }
 
-.buttonShadow{
-    height: 10px;
-    width: 20px;
-    background: #00000096;
-    border-radius: 100%;
-    position:relative;
-    left: 15px;
-    margin-top: 5px;
-    filter: blur(2px);
+.buttonShadow {
+  height: 10px;
+  width: 20px;
+  background: #00000096;
+  border-radius: 100%;
+  position: relative;
+  left: 15px;
+  margin-top: 5px;
+  filter: blur(2px);
   -webkit-filter: blur(2px);
   z-index: 0;
   animation: anime3 1s infinite ease-in-out alternate;
-    
-}
-
-.elephantButton:hover{
-   background-color: transparent;
-   transform: scale(1.2);
-}
-
-.buttonContainerHippopotamus{
-    position: absolute;
-    left: 565px;
-    top: 490px;
-}
-
-.hippopotamusButton{
-    background-color: transparent;
-    height: 20px;
-    width: 20px;
-    border-color: transparent;
-    
-    
-    color:#ff0000;
-    
-    /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.5), 0 7px 20px 0 rgba(0,0,0,0.5); */
-    animation: anime 1s infinite ease-in-out alternate;
-}
-
-.hippopotamusButton:hover{
-    background-color: transparent;
-   transform: scale(1.2);
-}
-
-.hippopotamusModal{
-    display: 'block';
-    position: fixed;
-    z-index:1;
-    left: 540px;
-    top: 532px;
-    height: 100%;
-    width: 200px;
-    overflow: auto;
-    border-radius: 5px;
-    justify-content: center;
-}
-
-.buttonContainerAviary{
-    position: absolute;
-    left: 433px;
-    top: 460px;
-}
-
-.aviaryButton{
-    background-color: transparent;
-    height: 20px;
-    width: 20px;
-    border-color: transparent;
-    
-    
-    color:#ff0000;
-    
-    /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.5), 0 7px 20px 0 rgba(0,0,0,0.5); */
-    animation: anime 1s infinite ease-in-out alternate;
-}
-
-.aviaryButton:hover{
-   background-color: transparent;
-   transform: scale(1.2);
-}
-
-.aviaryModal{
-    display: 'block';
-    position: fixed;
-    z-index:1;
-    left: 360px;
-    top: 532px;
-    height: 100%;
-    width: 200px;
-    overflow: auto;
-    border-radius: 5px;
-    justify-content: center;
-}
-
-.buttonContainerHyena{
-    position: absolute;
-    left: 545px;
-    top: 395px;
-}
-
-.hyenaButton{
-    background-color: transparent;
-    height: 20px;
-    width: 20px;
-    border-color: transparent;
-    
-    
-    color:#ff0000;
-    
-    /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
-    animation: anime 1s infinite ease-in-out alternate;
-}
-
-.hyenaButton:hover{
-   background-color: transparent;
-   transform: scale(1.2);
-}
-
-.hyenaModal{
-    display: 'block';
-    position: fixed;
-    z-index:1;
-    left: 535px;
-    top: 450px;
-    height: 100%;
-    width: 200px;
-    overflow: auto;
-    border-radius: 5px;
-    justify-content: center;
-}
-
-.buttonContainerSavanna{
-    position: absolute;
-    left: 618px;
-    top: 245px;
-}
-
-.savannaButton{
-    background-color: transparent;
-    height: 20px;
-    width: 20px;
-    border-color: transparent;
-    
-    
-    color:#ff0000;
-    
-    /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
-    animation: anime 1s infinite ease-in-out alternate;
-}
-
-.savannaButton:hover{
-   background-color: transparent;
-   transform: scale(1.2);
-}
-
-.savannaModal{
-    display: 'block';
-    position: fixed;
-    z-index:1;
-    left: 600px;
-    top: 310px;
-    height: 100%;
-    width: 200px;
-    overflow: auto;
-    border-radius: 5px;
-    justify-content: center;
-}
-
-.buttonContainerApex{
-    position: absolute;
-    left: 525px;
-    top: 290px;
-}
-
-.apexButton{
-    background-color: transparent;
-    height: 20px;
-    width: 20px;
-    border-color: transparent;
-    
-    
-    color:#ff0000;
-    
-    /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
-    animation: anime 1s infinite ease-in-out alternate;
-}
-
-.apexButton:hover{
-    background-color: transparent;
-   transform: scale(1.2);
-}
-
-.apexModal{
-    display: 'block';
-    position: fixed;
-    z-index:1;
-    left: 460px;
-    top: 315px;
-    height: 100%;
-    width: 200px;
-    overflow: auto;
-    border-radius: 5px;
-    justify-content: center;
-}
-
-.buttonContainerEndemic{
-    position: absolute;
-    left: 425px;
-    top: 70px;
-}
-
-.endemicButton{
-    background-color: transparent;
-    height: 20px;
-    width: 20px;
-    border-color: transparent;
-    
-    
-    color:#ff0000;
-    
-    /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
-    animation: anime 1s infinite ease-in-out alternate;
-}
-
-.endemicButton:hover{
-   background-color: transparent;
-   transform: scale(1.2);
-}
-
-.endemicModal{
-    display: 'block';
-    position: fixed;
-    z-index:1;
-    left: 460px;
-    top: 155px;
-    height: 100%;
-    width: 200px;
-    overflow: auto;
-    border-radius: 5px;
-    justify-content: center;
-}
-
-.buttonContainerOutReptile{
-    position: absolute;
-    left: 379px;
-    top: 110px;
-}
-
-.reptileButton{
-    background-color: transparent;
-    height: 20px;
-    width: 20px;
-    border-color: transparent;
-   
-    
-    color:#ff0000;
-    
-    /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
-    animation: anime 1s infinite ease-in-out alternate;
-}
-
-.reptileButton:hover{
-   background-color: transparent;
-   transform: scale(1.2);
-}
-
-.reptileModal{
-    display: 'block';
-    position: fixed;
-    z-index:1;
-    left: 300px;
-    top: 185px;
-    height: 100%;
-    width: 200px;
-    overflow: auto;
-    border-radius: 5px;
-    justify-content: center;
-}
-
-.buttonContainerMuseum{
-    position: absolute;
-    left: 415px;
-    top: 140px;
-}
-
-.museumButton{
-    background-color: transparent;
-    height: 20px;
-    width: 20px;
-    border-color: transparent;
-    
-    
-    color:#ff0000;
-    
-    /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
-    animation: anime 1s infinite ease-in-out alternate;
-}
-
-.museumButton:hover{
-   background-color: transparent;
-   transform: scale(1.2);
-}
-
-.museumModal{
-    display: 'block';
-    position: fixed;
-    z-index:1;
-    left: 360px;
-    top: 220px;
-    height: 100%;
-    width: 200px;
-    overflow: auto;
-    border-radius: 5px;
-    justify-content: center;
-}
-
-.buttonContainerInReptile{
-    position: absolute;
-    left: 245px;
-    top: 235px;
-}
-
-.inreptileButton{
-    background-color: transparent;
-    height: 20px;
-    width: 20px;
-    border-color: transparent;
-    
-    
-    color:#ff0000;
-    
-    /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
-    animation: anime 1s infinite ease-in-out alternate;
-}
-
-.inreptileButton:hover{
-   background-color: transparent;
-   transform: scale(1.2);
-}
-
-.inreptileModal{
-    display: 'block';
-    position: fixed;
-    z-index:1;
-    left: 170px;
-    top: 265px;
-    height: 100%;
-    width: 200px;
-    overflow: auto;
-    border-radius: 5px;
-    justify-content: center;
-}
-
-.buttonContainerLagoon{
-    position: absolute;
-    left: 310px;
-    top: 225px;
-}
-
-.lagoonButton{
-    background-color: transparent;
-    height: 20px;
-    width: 20px;
-    border-color: transparent;
-   
-    
-    color:#ff0000;
-    
-   /*  box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
-    animation: anime 1s infinite ease-in-out alternate;
-}
-
-.lagoonButton:hover{
-   background-color: transparent;
-   transform: scale(1.2);
-}
-
-.lagoonModal{
-    display: 'block';
-    position: fixed;
-    z-index:1;
-    left: 250px;
-    top: 290px;
-    height: 100%;
-    width: 200px;
-    overflow: auto;
-    border-radius: 5px;
-    justify-content: center;
-}
-
-.buttonContainerIsland{
-    position: absolute;
-    left: 357px;
-    top: 300px;
-}
-
-.islandButton{
-    background-color: transparent;
-    height: 20px;
-    width: 20px;
-    border-color: transparent;
-    
-    
-    color:#ff0000;
-    
-    /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
-    animation: anime 1s infinite ease-in-out alternate;
-}
-
-.islandButton:hover{
-   background-color: transparent;
-   transform: scale(1.2);
-}
-
-.islandModal{
-    display: 'block';
-    position: fixed;
-    z-index:1;
-    left: 310px;
-    top: 355px;
-    height: 100%;
-    width: 200px;
-    overflow: auto;
-    border-radius: 5px;
-    justify-content: center;
-}
-
-.buttonContainerPrimates{
-    position: absolute;
-    left: 215px;
-    top: 330px;
-}
-
-.primatesButton{
-    background-color: transparent;
-    height: 20px;
-    width: 20px;
-    border-color: transparent;
-    
-    
-    color:#ff0000;
-    
-    /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
-    animation: anime 1s infinite ease-in-out alternate;
-}
-
-.primatesButton:hover{
-   background-color: transparent;
-   transform: scale(1.2);
-}
-
-.primatesModal{
-    display: 'block';
-    position: fixed;
-    z-index:1;
-    left: 180px;
-    top: 380px;
-    height: 100%;
-    width: 200px;
-    overflow: auto;
-    border-radius: 5px;
-    justify-content: center;
-}
-
-.buttonContainerButterfly{
-    position: absolute;
-    left: 135px;
-    top: 590px;
-}
-
-.butterflyButton{
-    background-color: transparent;
-    height: 20px;
-    width: 20px;
-    border-color: transparent;
-    
-    
-    color:#ff0000;
-    
-    /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
-    animation: anime 1s infinite ease-in-out alternate;
-}
-
-.butterflyButton:hover{
-   background-color: transparent;
-   transform: scale(1.2);
-}
-
-.butterflyModal{
-    display: 'block';
-    position: fixed;
-    z-index:1;
-    left: 110px;
-    top: 645px;
-    height: 100%;
-    width: 200px;
-    overflow: auto;
-    border-radius: 5px;
-    justify-content: center;
-}
-
-.buttonContainerBotanical{
-    position: absolute;
-    left: 245px;
-    top: 600px;
-}
-
-.botanicalButton{
-    background-color: transparent;
-    height: 20px;
-    width: 20px;
-    border-color: transparent;
-    
-    
-    color:#ff0000;
-    
-   /*  box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
-    animation: anime 1s infinite ease-in-out alternate;
-}
-
-.botanicalButton:hover{
-   background-color: transparent;
-   transform: scale(1.2);
-}
-
-.botanicalModal{
-    display: 'block';
-    position: fixed;
-    z-index:1;
-    left: 230px;
-    top: 645px;
-    height: 100%;
-    width: 200px;
-    overflow: auto;
-    border-radius: 5px;
-    justify-content: center;
-}
-
-.button2{
-    background: rgba(255, 255, 255, 0.164);
-    padding: 15px; 
-    color: #fff;
-    border: 0;
-    border-radius: 10px;
-    position: absolute;
-    left: 240px;
-    top: 640px;
-    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2);
-}
-
-.button2:hover{
-    background:#FFFFFF;
-    color:#000000;
-}
-
-
-
-.button4{
-    background: rgba(255, 255, 255, 0.164);
-    padding: 15px; 
-    color: #fff;
-    border: 0;
-    border-radius: 10px;
-    position: absolute;
-    left: 380px;
-    top: 530px;
-    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2);
-}
-
-.button4:hover{
-    background:#FFFFFF;
-    color:#000000;
-}
-
-
-.modal2{
-    display:none;
-    position: fixed;
-    z-index:1;
-    left: 0; 
-    top:0;
-    height: 100%;
-    width: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.5);
-}
-
-.closeBtn2{
-    color: #ccc;
-    float: right;
-    font-size:30px;
-}
-
-.closeBtn2:hover, .closeBtn2:focus{
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-
-
-.modal3{
-    display:none;
-    position: fixed;
-    z-index:1;
-    left: 0; 
-    top:0;
-    height: 100%;
-    width: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.5);
-}
-
-.closeBtn3{
-    color: #ccc;
-    float: right;
-    font-size:30px;
-}
-
-.closeBtn3:hover, .closeBtn3:focus{
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-
-.modal4{
-    display:none;
-    position: fixed;
-    z-index:1;
-    left: 0; 
-    top:0;
-    height: 100%;
-    width: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.5);
-}
-
-.closeBtn4{
-    color: #ccc;
-    float: right;
-    font-size:30px;
-}
-
-.closeBtn4:hover, .closeBtn4:focus{
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
 }
 
+.elephantButton:hover {
+  background-color: transparent;
+  transform: scale(1.2);
+}
+
+.buttonContainerHippopotamus {
+  position: absolute;
+  left: 672px;
+  top: 685px;
+}
+
+.hippopotamusButton {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border-color: transparent;
+
+  color: #ff0000;
+
+  /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.5), 0 7px 20px 0 rgba(0,0,0,0.5); */
+  animation: anime 1s infinite ease-in-out alternate;
+}
+
+.hippopotamusButton:hover {
+  background-color: transparent;
+  transform: scale(1.2);
+}
+
+.hippopotamusModal {
+  display: "block";
+  position: absolute;
+  z-index: 1;
+  left: 602px;
+  top: 695px;
+  height: 100%;
+  width: 200px;
+  overflow: auto;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.buttonContainerAviary {
+  position: absolute;
+  left: 511px;
+  top: 650px;
+}
+
+.aviaryButton {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border-color: transparent;
+
+  color: #ff0000;
+
+  /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.5), 0 7px 20px 0 rgba(0,0,0,0.5); */
+  animation: anime 1s infinite ease-in-out alternate;
+}
+
+.aviaryButton:hover {
+  background-color: transparent;
+  transform: scale(1.2);
+}
+
+.aviaryModal {
+  display: "block";
+  position: absolute;
+  z-index: 1;
+  left: 441px;
+  top: 660px;
+  height: 100%;
+  width: 200px;
+  overflow: auto;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.buttonContainerHyena {
+  position: absolute;
+  left: 645px;
+  top: 568px;
+}
+
+.hyenaButton {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border-color: transparent;
+
+  color: #ff0000;
+
+  /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
+  animation: anime 1s infinite ease-in-out alternate;
+}
+
+.hyenaButton:hover {
+  background-color: transparent;
+  transform: scale(1.2);
+}
+
+.hyenaModal {
+  display: "block";
+  position: absolute;
+  z-index: 1;
+  left: 575px;
+  top: 578px;
+  height: 100%;
+  width: 200px;
+  overflow: auto;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.buttonContainerSavanna {
+  position: absolute;
+  left: 736px;
+  top: 385px;
+}
+
+.savannaButton {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border-color: transparent;
+
+  color: #ff0000;
+
+  /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
+  animation: anime 1s infinite ease-in-out alternate;
+}
+
+.savannaButton:hover {
+  background-color: transparent;
+  transform: scale(1.2);
+}
+
+.savannaModal {
+  display: "block";
+  position: absolute;
+  z-index: 1;
+  left: 666px;
+  top: 395px;
+  height: 100%;
+  width: 200px;
+  overflow: auto;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.buttonContainerApex {
+  position: absolute;
+  left: 620px;
+  top: 442px;
+}
+
+.apexButton {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border-color: transparent;
+
+  color: #ff0000;
+
+  /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
+  animation: anime 1s infinite ease-in-out alternate;
+}
+
+.apexButton:hover {
+  background-color: transparent;
+  transform: scale(1.2);
+}
+
+.apexModal {
+  display: "block";
+  position: absolute;
+  z-index: 1;
+  left: 550px;
+  top: 452px;
+  height: 100%;
+  width: 200px;
+  overflow: auto;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.buttonContainerEndemic {
+  position: absolute;
+  left: 502px;
+  top: 170px;
+}
+
+.endemicButton {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border-color: transparent;
+
+  color: #ff0000;
+
+  /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
+  animation: anime 1s infinite ease-in-out alternate;
+}
+
+.endemicButton:hover {
+  background-color: transparent;
+  transform: scale(1.2);
+}
+
+.endemicModal {
+  display: "block";
+  position: absolute;
+  z-index: 1;
+  left: 432px;
+  top: 180px;
+  height: 100%;
+  width: 200px;
+  overflow: auto;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.buttonContainerOutReptile {
+  position: absolute;
+  left: 445px;
+  top: 225px;
+}
+
+.reptileButton {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border-color: transparent;
+
+  color: #ff0000;
+
+  /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
+  animation: anime 1s infinite ease-in-out alternate;
+}
+
+.reptileButton:hover {
+  background-color: transparent;
+  transform: scale(1.2);
+}
+
+.reptileModal {
+  display: "block";
+  position: absolute;
+  z-index: 1;
+  left: 375px;
+  top: 235px;
+  height: 100%;
+  width: 200px;
+  overflow: auto;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.buttonContainerMuseum {
+  position: absolute;
+  left: 489px;
+  top: 255px;
+}
+
+.museumButton {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border-color: transparent;
+
+  color: #ff0000;
+
+  /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
+  animation: anime 1s infinite ease-in-out alternate;
+}
+
+.museumButton:hover {
+  background-color: transparent;
+  transform: scale(1.2);
+}
+
+.museumModal {
+  display: "block";
+  position: absolute;
+  z-index: 1;
+  left: 419px;
+  top: 265px;
+  height: 100%;
+  width: 200px;
+  overflow: auto;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.buttonContainerInReptile {
+  position: absolute;
+  left: 282px;
+  top: 370px;
+}
+
+.inreptileButton {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border-color: transparent;
+
+  color: #ff0000;
+
+  /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
+  animation: anime 1s infinite ease-in-out alternate;
+}
+
+.inreptileButton:hover {
+  background-color: transparent;
+  transform: scale(1.2);
+}
+
+.inreptileModal {
+  display: "block";
+  position: absolute;
+  z-index: 1;
+  left: 212px;
+  top: 380px;
+  height: 100%;
+  width: 200px;
+  overflow: auto;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.buttonContainerLagoon {
+  position: absolute;
+  left: 362px;
+  top: 360px;
+}
+
+.lagoonButton {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border-color: transparent;
+
+  color: #ff0000;
+
+  /*  box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
+  animation: anime 1s infinite ease-in-out alternate;
+}
+
+.lagoonButton:hover {
+  background-color: transparent;
+  transform: scale(1.2);
+}
+
+.lagoonModal {
+  display: "block";
+  position: absolute;
+  z-index: 1;
+  left: 292px;
+  top: 370px;
+  height: 100%;
+  width: 200px;
+  overflow: auto;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.buttonContainerLagoon2 {
+  position: absolute;
+  left: 230px;
+  top: 720px;
+}
+
+.lagoon2Button {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border-color: transparent;
+
+  color: #ff0000;
+
+  /*  box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
+  animation: anime 1s infinite ease-in-out alternate;
+}
+
+.lagoon2Button:hover {
+  background-color: transparent;
+  transform: scale(1.2);
+}
+
+.lagoon2Modal {
+  display: "block";
+  position: absolute;
+  z-index: 1;
+  left: 160px;
+  top: 730px;
+  height: 100%;
+  width: 200px;
+  overflow: auto;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.buttonContainerIsland {
+  position: absolute;
+  left: 418px;
+  top: 450px;
+}
+
+.islandButton {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border-color: transparent;
+
+  color: #ff0000;
+
+  /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
+  animation: anime 1s infinite ease-in-out alternate;
+}
+
+.islandButton:hover {
+  background-color: transparent;
+  transform: scale(1.2);
+}
+
+.islandModal {
+  display: "block";
+  position: absolute;
+  z-index: 1;
+  left: 348px;
+  top: 460px;
+  height: 100%;
+  width: 200px;
+  overflow: auto;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.buttonContainerPrimates {
+  position: absolute;
+  left: 245px;
+  top: 490px;
+}
+
+.primatesButton {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border-color: transparent;
+
+  color: #ff0000;
+
+  /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
+  animation: anime 1s infinite ease-in-out alternate;
+}
+
+.primatesButton:hover {
+  background-color: transparent;
+  transform: scale(1.2);
+}
+
+.primatesModal {
+  display: "block";
+  position: absolute;
+  z-index: 1;
+  left: 175px;
+  top: 500px;
+  height: 100%;
+  width: 200px;
+  overflow: auto;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.buttonContainerPark {
+  position: absolute;
+  left: 235px;
+  top: 565px;
+}
+
+.parkButton {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border-color: transparent;
+
+  color: #ff0000;
+
+  /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
+  animation: anime 1s infinite ease-in-out alternate;
+}
+
+.parkButton:hover {
+  background-color: transparent;
+  transform: scale(1.2);
+}
+
+.parkModal {
+  display: "block";
+  position: absolute;
+  z-index: 1;
+  left: 165px;
+  top: 575px;
+  height: 100%;
+  width: 200px;
+  overflow: auto;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.buttonContainerFood {
+  position: absolute;
+  left: 383px;
+  top: 698px;
+}
+
+.foodButton {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border-color: transparent;
+
+  color: #ff0000;
+
+  /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
+  animation: anime 1s infinite ease-in-out alternate;
+}
+
+.foodButton:hover {
+  background-color: transparent;
+  transform: scale(1.2);
+}
+
+.foodModal {
+  display: "block";
+  position: absolute;
+  z-index: 1;
+  left: 313px;
+  top: 708px;
+  height: 100%;
+  width: 200px;
+  overflow: auto;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.buttonContainerFood2 {
+  position: absolute;
+  left: 413px;
+  top: 820px;
+}
+
+.food2Button {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border-color: transparent;
+
+  color: #ff0000;
+
+  /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
+  animation: anime 1s infinite ease-in-out alternate;
+}
+
+.food2Button:hover {
+  background-color: transparent;
+  transform: scale(1.2);
+}
+
+.food2Modal {
+  display: "block";
+  position: absolute;
+  z-index: 1;
+  left: 343px;
+  top: 830px;
+  height: 100%;
+  width: 200px;
+  overflow: auto;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.buttonContainerButterfly {
+  position: absolute;
+  left: 150px;
+  top: 807px;
+}
+
+.butterflyButton {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border-color: transparent;
+
+  color: #ff0000;
+
+  /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
+  animation: anime 1s infinite ease-in-out alternate;
+}
+
+.butterflyButton:hover {
+  background-color: transparent;
+  transform: scale(1.2);
+}
+
+.butterflyModal {
+  display: "block";
+  position: absolute;
+  z-index: 1;
+  left: 80px;
+  top: 817px;
+  height: 100%;
+  width: 200px;
+  overflow: auto;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.buttonContainerBotanical {
+  position: absolute;
+  left: 285px;
+  top: 815px;
+}
+
+.botanicalButton {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border-color: transparent;
+
+  color: #ff0000;
+
+  /*  box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.2); */
+  animation: anime 1s infinite ease-in-out alternate;
+}
+
+.botanicalButton:hover {
+  background-color: transparent;
+  transform: scale(1.2);
+}
+
+.botanicalModal {
+  display: "block";
+  position: absolute;
+  z-index: 1;
+  left: 215px;
+  top: 825px;
+  height: 100%;
+  width: 200px;
+  overflow: auto;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.buttonContainerFountain {
+  position: absolute;
+  left: 345px;
+  top: 685px;
+}
+
+.fountainButton {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border-color: transparent;
+
+  color: #ff0000;
+
+  /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.5), 0 7px 20px 0 rgba(0,0,0,0.5); */
+  animation: anime 1s infinite ease-in-out alternate;
+}
+
+.fountainButton:hover {
+  background-color: transparent;
+  transform: scale(1.2);
+}
+
+.fountainModal {
+  display: "block";
+  position: absolute;
+  z-index: 1;
+  left: 275px;
+  top: 695px;
+  height: 100%;
+  width: 200px;
+  overflow: auto;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.buttonContainerTicket {
+  position: absolute;
+  left: 562px;
+  top: 852px;
+}
+
+.ticketButton {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border-color: transparent;
+
+  color: #ff0000;
+
+  /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.5), 0 7px 20px 0 rgba(0,0,0,0.5); */
+  animation: anime 1s infinite ease-in-out alternate;
+}
+
+.ticketButton:hover {
+  background-color: transparent;
+  transform: scale(1.2);
+}
+
+.ticketModal {
+  display: "block";
+  position: absolute;
+  z-index: 1;
+  left: 492px;
+  top: 862px;
+  height: 100%;
+  width: 200px;
+  overflow: auto;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.buttonContainerParking {
+  position: absolute;
+  left: 687px;
+  top: 854px;
+}
+
+.parkingButton {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border-color: transparent;
+
+  color: #ff0000;
+
+  /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.5), 0 7px 20px 0 rgba(0,0,0,0.5); */
+  animation: anime 1s infinite ease-in-out alternate;
+}
+
+.parkingButton:hover {
+  background-color: transparent;
+  transform: scale(1.2);
+}
+
+.parkingModal {
+  display: "block";
+  position: absolute;
+  z-index: 1;
+  left: 617px;
+  top: 864px;
+  height: 100%;
+  width: 200px;
+  overflow: auto;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.buttonContainerParking2 {
+  position: absolute;
+  left: 470px;
+  top: 858px;
+}
+
+.parking2Button {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border-color: transparent;
+
+  color: #ff0000;
+
+  /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.5), 0 7px 20px 0 rgba(0,0,0,0.5); */
+  animation: anime 1s infinite ease-in-out alternate;
+}
+
+.parking2Button:hover {
+  background-color: transparent;
+  transform: scale(1.2);
+}
+
+.parking2Modal {
+  display: "block";
+  position: absolute;
+  z-index: 1;
+  left: 400px;
+  top: 868px;
+  height: 100%;
+  width: 200px;
+  overflow: auto;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.buttonContainerE {
+  position: absolute;
+  left: 75px;
+  top: 884px;
+}
+
+.eButton {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border-color: transparent;
+
+  color: #ff0000;
+
+  /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.5), 0 7px 20px 0 rgba(0,0,0,0.5); */
+  animation: anime 1s infinite ease-in-out alternate;
+}
+
+.eButton:hover {
+  background-color: transparent;
+  transform: scale(1.2);
+}
+
+.eModal {
+  display: "block";
+  position: absolute;
+  z-index: 1;
+  left: 5px;
+  top: 894px;
+  height: 100%;
+  width: 200px;
+  overflow: auto;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.buttonContainerF {
+  position: absolute;
+  left: 170px;
+  top: 884px;
+}
+
+.fButton {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border-color: transparent;
+
+  color: #ff0000;
+
+  /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.5), 0 7px 20px 0 rgba(0,0,0,0.5); */
+  animation: anime 1s infinite ease-in-out alternate;
+}
+
+.fButton:hover {
+  background-color: transparent;
+  transform: scale(1.2);
+}
+
+.fModal {
+  display: "block";
+  position: absolute;
+  z-index: 1;
+  left: 100px;
+  top: 894px;
+  height: 100%;
+  width: 200px;
+  overflow: auto;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.buttonContainerG {
+  position: absolute;
+  left: 307px;
+  top: 886px;
+}
+
+.gButton {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border-color: transparent;
+
+  color: #ff0000;
+
+  /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.5), 0 7px 20px 0 rgba(0,0,0,0.5); */
+  animation: anime 1s infinite ease-in-out alternate;
+}
+
+.gButton:hover {
+  background-color: transparent;
+  transform: scale(1.2);
+}
+
+.gModal {
+  display: "block";
+  position: absolute;
+  z-index: 1;
+  left: 237px;
+  top: 896px;
+  height: 100%;
+  width: 200px;
+  overflow: auto;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.buttonContainerC {
+  position: absolute;
+  left: 454px;
+  top: 715px;
+}
+
+.cButton {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border-color: transparent;
+
+  color: #ff0000;
+
+  /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.5), 0 7px 20px 0 rgba(0,0,0,0.5); */
+  animation: anime 1s infinite ease-in-out alternate;
+}
+
+.cButton:hover {
+  background-color: transparent;
+  transform: scale(1.2);
+}
+
+.cModal {
+  display: "block";
+  position: absolute;
+  z-index: 1;
+  left: 384px;
+  top: 725px;
+  height: 100%;
+  width: 200px;
+  overflow: auto;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.buttonContainerC2 {
+  position: absolute;
+  left: 574px;
+  top: 660px;
+}
+
+.c2Button {
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  border-color: transparent;
+
+  color: #ff0000;
+
+  /* box-shadow: 0 5px 8px 0 rgba(0,0,0,0.5), 0 7px 20px 0 rgba(0,0,0,0.5); */
+  animation: anime 1s infinite ease-in-out alternate;
+}
+
+.c2Button:hover {
+  background-color: transparent;
+  transform: scale(1.2);
+}
+
+.c2Modal {
+  display: "block";
+  position: absolute;
+  z-index: 1;
+  left: 504px;
+  top: 670px;
+  height: 100%;
+  width: 200px;
+  overflow: auto;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.button2 {
+  background: rgba(255, 255, 255, 0.164);
+  padding: 15px;
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+  position: absolute;
+  left: 240px;
+  top: 640px;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.button2:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+.button4 {
+  background: rgba(255, 255, 255, 0.164);
+  padding: 15px;
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+  position: absolute;
+  left: 380px;
+  top: 530px;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.button4:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+.modal2 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.closeBtn2 {
+  color: #ccc;
+  float: right;
+  font-size: 30px;
+}
+
+.closeBtn2:hover,
+.closeBtn2:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal3 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.closeBtn3 {
+  color: #ccc;
+  float: right;
+  font-size: 30px;
+}
+
+.closeBtn3:hover,
+.closeBtn3:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal4 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.closeBtn4 {
+  color: #ccc;
+  float: right;
+  font-size: 30px;
+}
+
+.closeBtn4:hover,
+.closeBtn4:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
